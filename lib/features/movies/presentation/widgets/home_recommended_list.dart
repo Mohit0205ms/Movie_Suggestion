@@ -3,14 +3,14 @@ import '../../../../core/widgets/movie_card.dart';
 import '../../../../core/widgets/app_svg_icon.dart';
 import '../../../../core/constants/app_assets.dart';
 
-class HomeMyList extends StatefulWidget {
-  const HomeMyList({super.key});
+class HomeRecommendedList extends StatefulWidget {
+  const HomeRecommendedList({super.key});
 
   @override
-  State<HomeMyList> createState() => _HomeMyListState();
+  State<HomeRecommendedList> createState() => _HomeRecommendedListState();
 }
 
-class _HomeMyListState extends State<HomeMyList> {
+class _HomeRecommendedListState extends State<HomeRecommendedList> {
 
   @override
   Widget build(BuildContext context) {
