@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter_movie_suggestion/features/movies/presentation/widgets/home_header.dart';
 import 'package:flutter_movie_suggestion/features/movies/presentation/widgets/home_hero_carousel.dart';
 import 'package:flutter_movie_suggestion/features/movies/presentation/widgets/home_search_bar.dart';
-import 'package:flutter_movie_suggestion/features/movies/presentation/widgets/home_my_list.dart';
-import 'package:flutter_movie_suggestion/features/movies/presentation/widgets/home_recommended_list.dart';
+import 'package:flutter_movie_suggestion/features/movies/presentation/widgets/movie_section.dart';
 
 class MovieHomeScreen extends StatelessWidget {
   const MovieHomeScreen({super.key});
@@ -22,8 +22,15 @@ class MovieHomeScreen extends StatelessWidget {
               const HomeSearchBar(),
               const SizedBox(height: 24),
               const HomeHeroCarousel(),
-              const HomeMyList(),
-              const HomeRecommendedList(),
+              MovieSection(title: "My List", onSeeAll: () {
+                context.push('/movie/view-more/My List');
+              }),
+              MovieSection(title: "Recommended", onSeeAll: () {
+                context.push('/movie/view-more/Recommended');
+              }),
+              MovieSection(title: "Top Rated", onSeeAll: () {
+                context.push('/movie/view-more/Top Rated');
+              }),
             ],
           ),
         )
